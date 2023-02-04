@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART STUDIO</title>
+    <link rel="stylesheet" href="./index.css">
+    <script>
+       function onNavChange(navId) {
+           if (navId == 'home') {
+           document.getElementById('home').style.display = 'block';
+           document.getElementById('about').style.display = 'none';
+           document.getElementById('gallery').style.display = 'none';
+           document.getElementById('contact').style.display = 'block';
+
+           document.getElementById('nav-home').classList.add("active");
+           document.getElementById('nav-about').classList.remove("active");
+           document.getElementById('nav-gallery').classList.remove("active");
+           document.getElementById('nav-contact').classList.add("active");
+       } else if (navId == 'about') {
+           document.getElementById('home').style.display = 'none';
+           document.getElementById('about').style.display = 'block';
+           document.getElementById('gallery').style.display = 'none';
+           document.getElementById('contact').style.display = 'none';
+
+           document.getElementById('nav-home').classList.remove("active");
+           document.getElementById('nav-about').classList.add("active");
+           document.getElementById('nav-gallery').classList.remove("active");
+           document.getElementById('nav-contact').classList.remove("active");
+       } else if (navId == 'gallery') {
+           document.getElementById('home').style.display = 'none';
+           document.getElementById('about').style.display = 'none';
+           document.getElementById('gallery').style.display = 'block';
+           document.getElementById('contact').style.display = 'none';
+
+           document.getElementById('nav-home').classList.remove("active");
+           document.getElementById('nav-about').classList.remove("active");
+           document.getElementById('nav-gallery').classList.add("active");
+           document.getElementById('nev-contact').classList.remove("active");
+       } else if (navId == 'contact') {
+           document.getElementById('home').style.display = 'none';
+           document.getElementById('about').style.display = 'none';
+           document.getElementById('gallery').style.display = 'none';
+           document.getElementById('contact').style.display = 'block';
+
+           document.getElementById('nav-home').classList.remove("active");
+           document.getElementById('nav-about').classList.remove("active");
+           document.getElementById('nav-gallery').classList.remove("active");
+           document.getElementById('nav-contact').classList.add("active");
+       } }
+</script>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <p class="logo-text">ART</p>
+            <img class="logo" src="./images/logo.png" alt="logo">
+            <p class="logo-text">STUDIO<p>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item" onclick="onNavChange('home')" ><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item" onclick="onNavChange('about')"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item" onclick="onNavChange('gallery')"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item" onclick="onNavChange('contact')"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="home" class="hero-image">
+        <h1 class="hero-title">THE ART WITH YOU</h1>
+    </div>
+    <main>
+        <div class="my-32 py-68">
+            <section id="about" class="w-30 mx-auto" >
+                <h2 class="my-24 text-center" >About us</h2>
+                <p class="fw-700 text-justify">Art studio sells art paintings.
+                Our paintings are made using the oil on canvas technique. We have images of different dimensions. Also, we can create images according to your wishes. Choose the motif and dimension yourself, and we will paint your ideal picture for you. Delight yourself and others with original works of art. Take a look at our gallery and feel free to contact us, and we will help you choose the ideal work of art.</p>
+            </section>
+        </div>
+        <section id="gallery">
+            <h2 class="my-24 text-center">Art Gallery</h2>
+            <div class="m-12">
+                <figure class="image-container">
+                    <img class="image" src="./gallery/image1.jpg" alt="moon" width="300" height="400">
+                    <figcaption class="image-description">The Moon, 50x30cm, oil on canvas, 2023</figcaption>
+                </figure><!--
+                --><figure class="image-container">
+                    <img class="image" src="./gallery/image2.jpg" alt="samurai" width="400" height="300">
+                    <figcaption class="image-description">The Samurai, 50x30cm, oil on canvas, 2023</figcaption>
+                </figure><!--
+                --><figure class="image-container">
+                    <img class="image" src="./gallery/image3.jpg" alt="tree" width="400" height="300">
+                    <figcaption class="image-description">Spring Tree, 50x30cm, oil on canvas, 2023</figcaption>
+                </figure><!--
+                --><figure class="image-container">
+                    <img class="image" src="./gallery/image4.jpg" alt="anther" width="400" height="300">
+                    <figcaption class="image-description">Anther of a Flower, 40x20cm, oil on canvas, 2023</figcaption>
+                </figure><!--
+                --><figure class="image-container">
+                    <img class="image" src="./gallery/image5.jpg" alt="butterfly" width="400" height="300">
+                    <figcaption class="image-description">Butterfly, 50x30cm, oil on canvas, 2023</figcaption>
+                </figure><!--
+                --><figure class="image-container">
+                    <img class="image" src="./gallery/image6.jpg" alt="butterfly" width="400" height="300">
+                    <figcaption class="image-description">Butterfly, 80x50cm, oil on canvas, 2023</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="contact" class="py-68">
+            <h2 class="text-center">Contact us</h2>
+            <form class="form my-24">
+                <input class="my-12" type="text" placeholder="Enter name" id="name" value=""><br>
+                <input class="my-12" type="text" placeholder="Enter e-mail" id="mail" value=""><br>
+                <textarea class="my-12" placeholder="Your message" id="subject"></textarea><br>
+                <button class="btn fw-700" type="submit">Send</button><br>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <div class="d-inline socials"><img src="./images/instagram.png" alt="instagram" width="64" height="64"></div>
+            <div class="d-inline socials"><img src="./images/facebook.png" alt="facebook" width="64" height="64"></div>
+            <div class="d-inline socials"><img src="./images/twitter.png" alt="twitter" width="64" height="64"></div>
+        </div>
+        <div class="divider my-12"></div>
+        <p class="text-center my-12">&copy; 2023 ART STUDIO | All Rights Reserved</p>
+        <div class="footer-bottom">
+            <p class="fw-500">This project is coded by</p>
+            <p class="fw-700 author">ALEXANDRA PETROVIC</p>
+            <a href="https://github.com/alexandrapetrovic" target="_blank">alexandrapetrovic</a><br>
+            <img class="logo-author mt-12" src="./images/author.png" alt="logo" width="84" height="84">
+        </div>
+    </footer>
+</body>
+</html>
