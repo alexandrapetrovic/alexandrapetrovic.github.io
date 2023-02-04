@@ -284,6 +284,14 @@
       align-items: center;
       justify-content: center;
     }
+
+    .w-30 {
+      height: 60px;
+    }
+
+    .media {
+      width: 80%;
+    }
   }
 
   
